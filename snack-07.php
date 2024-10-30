@@ -10,10 +10,10 @@ These tests cover basic skills like conditionals, string manipulation, arrays, a
 
 <?php 
     function daysUntilNewYear() {
-        $today = date_create("now");
-        $nyd = date_create("2025/01/01");
-		$diff = date_diff($nyd,$today);
-		var_dump($diff->days);
-    }
-
+		$today = date_create("now");
+		$nyd = date_create("first day of January next year"); // Dynamically set to next Jan 1
+		$diff = date_diff($today, $nyd);
+		echo $diff->days;
+	}
+	
 	daysUntilNewYear();
