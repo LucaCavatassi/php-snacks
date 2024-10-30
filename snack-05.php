@@ -13,4 +13,4 @@ function sumArray($arr) {
     var_dump($result);
 }
 
-sumArray([1, 1, 1, 4]);
+sumArray([1, 2, 3, 4]);
