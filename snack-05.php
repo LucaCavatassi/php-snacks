@@ -6,8 +6,11 @@
 
 <?php 
 function sumArray($arr) {
-    $res = array_sum($arr);
-    var_dump($res);
+    $result = 0;
+    for ($i = 0; $i < count($arr); $i++) {
+        $result += $arr[$i];
+    }
+    var_dump($result);
 }
 
-sumArray([1, 2, 3, 4]);
+sumArray([1, 1, 1, 4]);
