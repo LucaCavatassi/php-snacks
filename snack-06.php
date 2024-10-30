@@ -9,16 +9,25 @@
 	•	findPersonAge([], "Alice") should return "Person not found". -->
 
     <?php 
+// function findPersonAge($arr, $str) {
+
+//     foreach ($arr as $key => $value) {
+
+//         if ($key === $str) {
+//             echo $value;
+//             return;
+//         }
+//     }
+//     echo "Person not found.";
+// }
+
 function findPersonAge($arr, $str) {
-
-    foreach ($arr as $key => $value) {
-
-        if ($key === $str) {
-            echo $value;
-            return;
-        }
+    if (array_key_exists($str, $arr)) {
+        echo $arr[$str];
+    } else {
+        echo "Person not found";
     }
-    echo "Person not found.";
 }
+
 
 findPersonAge(["Alice" => 25, "Bob" => 30], "Charlie");
