@@ -13,7 +13,7 @@ These tests cover basic skills like conditionals, string manipulation, arrays, a
 		$today = date_create("now");
 		$nyd = date_create("first day of January next year"); // Dynamically set to next Jan 1
 		$diff = date_diff($today, $nyd);
-		echo $diff->days;
+		echo "Days until new year " . $diff->days;
 	}
 	
 	daysUntilNewYear();
