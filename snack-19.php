@@ -28,3 +28,16 @@ function generaPassword($length) {
     // Convert the array back to a string
     return implode('', $passwordArray);
 }
+
+
+
+class Dinglemouse {
+    public function __construct($firstName, $lastName) {
+      $this->firstName = $firstName;
+      $this->lastName = $lastName;
+    }
+    
+    public function getFullName() {
+      return trim("{$this->firstName} {$this->lastName}");
+    }
+  }
