@@ -1,15 +1,4 @@
 <?php
-$books = [
-    ["title" => "1984", "author" => "George Orwell", "year" => 1949, "genre" => "Dystopian", "pages" => 328],
-    ["title" => "The Hobbit", "author" => "J.R.R. Tolkien", "year" => 1937, "genre" => "Fantasy", "pages" => 310],
-    ["title" => "To Kill a Mockingbird", "author" => "Harper Lee", "year" => 1960, "genre" => "Classic", "pages" => 281],
-    ["title" => "The Catcher in the Rye", "author" => "J.D. Salinger", "year" => 1951, "genre" => "Classic", "pages" => 277]
-];
-$filters = [
-    "year_min" => 1940,
-    "genre" => "Classic"
-];
-
 function filterBooks($books, $filters) {
     $filteredBooks = [];
 
