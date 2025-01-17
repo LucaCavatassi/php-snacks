@@ -11,6 +11,10 @@ class Product {
         $this->price = $price;
         $this->available_quantity = $available_quantity;
     }
+
+    public function applyDiscount($percentage) {
+        $this->price -= ($this->price * $percentage / 100);
+    }
 }
 class Catalog {
     public $catalog = [];
@@ -20,21 +24,25 @@ class Catalog {
         $this->catalog[] = $product;
     }
 
-    public function checkAvailabilty($catalog) {
+    public function checkAvailabilty() {
         $lowAvailabilityProducts = [];
 
-        foreach ($catalog as $product) {
-            if ($product["available_quantity"] < 10) {
+        foreach ($this->catalog as $product) {
+            if ($product->available_quantity < 10) {
                 $lowAvailabilityProducts[] = $product;
             }
         }
+
+        return $lowAvailabilityProducts;
     }
 
-    public function totalValue($catalog) {
+    public function totalValue() {
         $totalValue = 0;
-        foreach ($catalog as $product) {
-            $totalProduct = $product["price"] * $product["available_quantity"];
+        foreach ($this->catalog as $product) {
+            $totalProduct = $product->price * $product->available_quantity;
             $totalValue += $totalProduct;
         }
+
+        return $totalValue;
     }
 }
